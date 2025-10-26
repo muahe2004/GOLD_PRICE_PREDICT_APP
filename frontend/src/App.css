@@ -32,6 +32,7 @@
   padding: 5px 20px;
   transition: .25s;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .App-link:hover {
