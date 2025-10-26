@@ -1,25 +1,34 @@
 import React from 'react';
 import logo from './gold.svg';
 import './App.css';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import IndexView from "./views/index";
 
-function App() {
+function Home() {
+  const navigate = useNavigate();
+  const goToPrediction = () => {
+    navigate('/prediction');
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Dự đoán giá vàng!!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <p>Dự đoán giá vàng!!!</p>
+        <button className="App-link" onClick={goToPrediction}>
           XEM DỰ ĐOÁN NGAY BÂY GIỜ
-        </a>
+        </button>
       </header>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/prediction" element={<IndexView />} />
+    </Routes>
   );
 }
 

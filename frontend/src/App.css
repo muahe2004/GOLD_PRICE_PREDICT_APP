@@ -14,18 +14,30 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: linear-gradient(120deg, rgb(253, 251, 251) 0%, rgb(235, 237, 238) 100%);;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ff7300;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #f7b733;
+  cursor: pointer;
+  background: transparent;
+  font-size: 24px;
+  padding: 5px 20px;
+  transition: .25s;
+  border-radius: 4px;
+}
+
+.App-link:hover {
+  background-color: #f7b733;
+  color: white;
+  transform: scale(1.1); 
 }
 
 @keyframes App-logo-bounce {
